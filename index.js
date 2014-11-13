@@ -91,8 +91,7 @@ module.exports = function (options) {
 	} else {
 	  sass.render(opts);
 	}
-
-    if (addedLocalDirPath) opts.includePaths.pop();
+    if (addedLocalDirPath && opts.hasOwnProperty('includePaths')) opts.includePaths.pop();
 
   }
 
